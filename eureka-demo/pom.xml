@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ppj</groupId>
+        <artifactId>sc-demo</artifactId>
+        <version>210817.1810</version>
+    </parent>
+    <artifactId>eureka-demo</artifactId>
+    <name>eureka-demo</name>
+    <description>eureka-demo</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>eureka-server</module>
+        <module>serviceA</module>
+        <module>serviceB</module>
+        <module>service-a-api</module>
+        <module>histrix-dashbord</module>
+    </modules>
+
+</project>

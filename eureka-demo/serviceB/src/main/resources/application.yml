@@ -1,0 +1,41 @@
+server:
+  port: 9090
+spring:
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+  application:
+    name: ServiceB
+
+ribbon:
+  MaxAutoRetries: 1
+  ConnectTimeout: 1200
+  ReadTimeout: 1000
+#  OkToRetryOnAllOperations: true
+#  MaxAutoRetriesNextServer: 3
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+# 开启Feign下面的Hystrix功能
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      fallback:
+        # 是否开启服务降级
+        enabled: true
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
+  circuitBreaker:
+    requestVolumeThreshold: 4
