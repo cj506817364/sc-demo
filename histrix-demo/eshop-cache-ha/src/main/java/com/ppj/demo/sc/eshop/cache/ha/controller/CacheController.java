@@ -1,14 +1,13 @@
 package com.ppj.demo.sc.eshop.cache.ha.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.ppj.demo.sc.eshop.cache.ha.hystrix.command.GetBrandNameCommand;
-import com.ppj.demo.sc.eshop.cache.ha.hystrix.command.GetCityNameCommand;
-import com.ppj.demo.sc.eshop.cache.ha.hystrix.command.GetProductInfoCommand;
-import com.ppj.demo.sc.eshop.cache.ha.hystrix.command.GetProductInfosCollapser;
+import com.ppj.demo.sc.eshop.cache.ha.hystrix.command.*;
 import com.ppj.demo.sc.eshop.cache.ha.model.ProductInfo;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import rx.Observable;
+import rx.Observer;
 
 import java.util.ArrayList;
 import java.util.List;

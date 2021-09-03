@@ -36,6 +36,6 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 2000
+            timeoutInMilliseconds: 3600000
   circuitBreaker:
     requestVolumeThreshold: 4
